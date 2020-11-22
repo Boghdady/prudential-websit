@@ -68,6 +68,7 @@ img {
   font-weight: 400;
 }
 
+
 /* Hero */
 .hero {
   background: url('../images/home/showcase.jpg') no-repeat center center/cover;
@@ -95,4 +96,20 @@ img {
   font-size: 23px;
   max-width: 600px;
   margin: 20px 0 30px
+}
+
+/* Hero section overlay */
+.hero::before {
+  content:'';
+  position:absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6)
+}
+
+/* Make the content of the hero in the front */
+.hero * {
+  z-index: 10;
 }
